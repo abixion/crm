@@ -69,7 +69,7 @@ export default function Login() {
   useEffect(() => {
     if (user?.email.length > 1) {
       console.log(user?.email.length);
-      navigate('/admin/app', {replace: true});
+      navigate('/admin', {replace: true});
     }
   }, [user]);
 

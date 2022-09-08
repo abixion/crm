@@ -13,7 +13,7 @@ export const AuthProvider = ({children}) => {
     const login = async (data) => {
         console.log(data);
         setUser(data);
-        navigate("/admin/app");
+        navigate('/admin', {replace: true});
     };
 
     // call this function to sign out logged in user

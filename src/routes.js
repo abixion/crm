@@ -20,7 +20,8 @@ export default function Router() {
             path: '/admin',
             element: <ProtectedRoute><DashboardLayout/></ProtectedRoute>,
             children: [
-                {path: 'app', element: <DashboardApp/>},
+                {path: '', element: <DashboardApp/>},
+                {path: 'dashboard', element: <DashboardApp/>},
                 {path: 'user', element: <User/>},
                 {path: 'products', element: <Products/>},
                 {path: 'blog', element: <Blog/>},
@@ -49,7 +50,6 @@ export default function Router() {
             element: <LogoOnlyLayout/>,
             children: [
                 {path: '/', element: <Login/>},
-                {path: '/', element: <Navigate to="/dashboard/app"/>},
                 {path: '404', element: <NotFound/>},
                 {path: '*', element: <Navigate to="/404"/>},
             ],
