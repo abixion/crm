@@ -1,30 +1,8 @@
-## Minimal [(Free version)](https://minimal-kit-react.vercel.app/)
+## Abixion CRM 
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-> Free React Admin Dashboard made with Material-UI components and React.
-
-![preview](public/static/preview.jpg)
-
-| [Minimal Free](https://minimal-kit-react.vercel.app/) | [Minimal](https://material-ui.com/store/items/minimal-dashboard/) |
-| ----------------------------------------------------- | :---------------------------------------------------------------- |
-| **7** Demo pages                                      | **50+** demo pages                                                |
-| -                                                     | ✓ Multi-language                                                  |
-| -                                                     | ✓ Dark/Light Mode 🌓                                              |
-| -                                                     | ✓ [More components](https://minimals.cc/components)               |
-| -                                                     | ✓ Next.js version                                                 |
-| -                                                     | ✓ TypeScript version                                              |
-| -                                                     | ✓ Design files (Figma & Sketch)                                   |
-
-## Page demo
-
-- [Dashboard](https://minimal-kit-react.vercel.app/dashboard/app)
-- [Users](https://minimal-kit-react.vercel.app/dashboard/user)
-- [Product](https://minimal-kit-react.vercel.app/dashboard/products)
-- [Blog](https://minimal-kit-react.vercel.app/dashboard/blog)
-- [Login](https://minimal-kit-react.vercel.app/login)
-- [Register](https://minimal-kit-react.vercel.app/register)
-- [Not Found](https://minimal-kit-react.vercel.app/404)
+> CRM having capabilities of multiple franchises and dealing with clients and their invoices.
 
 ## Getting started
 
@@ -32,10 +10,16 @@
 - Install dependencies: `npm install` / `yarn install`
 - Start the project: `npm run start` / `yarn start`
 
-## License
+## Contributors guide
 
-Distributed under the MIT License. See [LICENSE](https://github.com/minimal-ui-kit/minimal.free/blob/main/LICENSE.md) for more information.
+- Create a new ticket/issue for every feature/bug
+- Create a separate branch for every issue
+- Commit and push in relevant branch (from main)
+- Create PR to merger code from that particular branch to main
+- Once feature is completed, ask someone for a PR review
+- ###NEVER PUSH DIRECTLY IN MAIN BRANCH
+
 
 ## Contact us
 
-Email Us: support@minimals.cc
+Email Us: ansarkhalil93@gamil.com
