@@ -17,7 +17,7 @@
 - Commit and push in relevant branch (from main)
 - Create PR to merger code from that particular branch to main
 - Once feature is completed, ask someone for a PR review
-- ###NEVER PUSH DIRECTLY IN MAIN BRANCH
+- ### NEVER PUSH DIRECTLY IN MAIN BRANCH
 
 
 ## Contact us
