@@ -66,12 +66,12 @@ export default function Login() {
 
   const {user} = useAuth();
 
-  useEffect(() => {
-    if (user?.email.length > 1) {
-      console.log(user?.email.length);
-      navigate('/admin', {replace: true});
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user?.email.length > 1) {
+  //     console.log(user?.email.length);
+  //     navigate('/admin', {replace: true});
+  //   }
+  // }, [user]);
 
   return (
     <Page title="Login">
