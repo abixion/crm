@@ -16,6 +16,7 @@ const navConfig = [
     path: '/admin/user',
     icon: getIcon('eva:people-fill'),
   },
+  
 ];
 
 export default navConfig;

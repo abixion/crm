@@ -6,7 +6,7 @@ import ThemeProvider from './theme';
 import ScrollToTop from './components/ScrollToTop';
 import {BaseOptionChartStyle} from './components/chart/BaseOptionChart';
 import {AuthProvider} from "./hooks/auth/useAuth";
-
+import "react-toastify/dist/ReactToastify.css";
 // ----------------------------------------------------------------------
 
 export default function App() {

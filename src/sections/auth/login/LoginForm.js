@@ -8,15 +8,19 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import {Link, Stack, IconButton, InputAdornment} from '@mui/material';
 import {LoadingButton} from '@mui/lab';
 // components
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
 import Iconify from '../../../components/Iconify';
 import {FormProvider, RHFTextField, RHFCheckbox} from '../../../components/hook-form';
 import {useAuth} from "../../../hooks/auth/useAuth";
+
 
 // ----------------------------------------------------------------------
 
 export default function LoginForm() {
     const navigate = useNavigate();
-    const {login} = useAuth();
+    const {login,authToken,setAuthToken} = useAuth();
+
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -42,11 +46,53 @@ export default function LoginForm() {
     } = methods;
 
     const onSubmit = async (data) => {
+        if (data.email !== "" && data.password !== "") {
+            axios
+              .post(`http://localhost:5000/api/auth/login`, {
+                email: data.email,
+                password: data.password,
+              })
+              .then((response) => {
+                if (response.data.error === true) {
+                  toast.error('Invalid Email Or Password', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    });
+                  
+                } else {
+                  toast.success('User Successfully Logged In....', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    });   
+                    setAuthToken(response?.data?.token)
+                //   setCurrentUser(response?.data?.user);
+                //   setAuthToken(response?.data?.token);
+                login(response)
+                navigate('/admin', {replace: true});
+    
+                }
+    
+              })
+              .catch((error) => {
+                 
+              });
+          }
         login(data);
     };
 
     return (
         <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
+            <ToastContainer />
             <Stack spacing={3}>
                 <RHFTextField name="email" label="Email address"/>
 

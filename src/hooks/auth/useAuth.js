@@ -7,14 +7,15 @@ const AuthContext = createContext({});
 
 export const AuthProvider = ({children}) => {
     const [user, setUser] = useLocalStorage("user",);
+    const [authToken, setAuthToken] = useLocalStorage("token",);
     const navigate = useNavigate();
 
     // call this function when you want to authenticate the user
     const login = async (data) => {
-        console.log(data);
         setUser(data);
-        navigate('/admin', {replace: true});
+        
     };
+    console.log(authToken)
 
     // call this function to sign out logged in user
     const logout = () => {
@@ -25,6 +26,8 @@ export const AuthProvider = ({children}) => {
     const value = useMemo(
         () => ({
             user,
+            authToken,
+            setAuthToken,
             login,
             logout
         }),

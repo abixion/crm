@@ -27,7 +27,7 @@ import SearchNotFound from '../components/SearchNotFound';
 import { UserListHead, UserListToolbar, UserMoreMenu } from '../sections/@dashboard/user';
 // mock
 import USERLIST from '../_mock/user';
-
+import { NewClient } from '../components/client-form/NewClient';
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
@@ -139,10 +139,9 @@ export default function User() {
           <Typography variant="h4" gutterBottom>
             User
           </Typography>
-          <Button variant="contained" component={RouterLink} to="#" startIcon={<Iconify icon="eva:plus-fill" />}>
-            New User
-          </Button>
+          <NewClient/>
         </Stack>
+    
 
         <Card>
           <UserListToolbar numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} />
